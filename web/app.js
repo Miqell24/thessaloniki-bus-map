@@ -307,12 +307,14 @@ async function init() {
   // the very top = first in symbol placement, so these names are never dropped.
   map.addLayer({
     id: 'stops-metro-names', type: 'symbol', source: 'stops',
-    minzoom: 11.5,
+    // from the zoom the discs appear: with 13 stations there is no crowding risk,
+    // and an unlabeled metro disc is exactly what this layer exists to prevent
+    minzoom: 11,
     filter: ['all', ['==', ['get', 'metro'], 1], ['==', ['get', 'label'], 1]],
     layout: {
       'text-field': ['get', 'name'],
       'text-font': [NARROW_BOLD],
-      'text-size': ['interpolate', ['linear'], ['zoom'], 11.5, 10.5, 17, 14],
+      'text-size': ['interpolate', ['linear'], ['zoom'], 11, 10.5, 17, 14],
       'text-variable-anchor': ['left', 'right', 'top', 'bottom'],
       'text-radial-offset': 0.9,
       'text-justify': 'auto',
