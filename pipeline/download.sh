@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+# Downloads input data: OSETH GTFS feed (data.gov.gr), OSM network (Overpass), MapLibre GL.
+# Everything is cached — re-running only fetches what is missing.
+#
+# Thessaloniki quirk: there is NO metro GTFS anywhere — the transport authority
+# OSETH publishes buses only and the metro operator publishes no feed at all — so
+# the metro feed is synthesized from OSM route relations (pipeline/metro-feed.mjs).
+set -euo pipefail
+cd "$(dirname "$0")/.."
+mkdir -p data/gtfs data/gtfs-t data/osm web/vendor
+
+# 1) GTFS — OSETH buses, published on data.gov.gr in ~2-week validity slices.
+#    This is the slice valid 14/07/2026-03/08/2026 (published 17.07.2026); newer
+#    slices show up as new resources of dataset 42c9a7da-c86c-48b1-914c-f340e8bef00d.
+if [ ! -f data/gtfs/routes.txt ]; then
+  echo "== oseth gtfs =="
+  curl -fL --retry 3 --max-time 600 -o data/oseth_gtfs.zip "https://data.gov.gr/dataset/42c9a7da-c86c-48b1-914c-f340e8bef00d/resource/8edcc617-7d0e-4832-9804-96c9811fabfd/download/20260717_gtfs.zip"
+  unzip -o data/oseth_gtfs.zip -d data/gtfs
+fi
+
+# 2) OSM — roadways over the whole OSETH network (GTFS shapes extent + margin:
+#    Lagkadas - Chalkidona - Vasilika - Nea Michaniona), incl. highway=construction
+if [ ! -f data/osm/thessaloniki.json ]; then
+  echo "== Overpass (roads) =="
+  Q='[out:json][timeout:900];way(40.34,22.52,41.00,23.27)["highway"~"^(motorway|trunk|primary|secondary|tertiary|unclassified|residential|living_street|service|busway|construction|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link)$"];out geom;'
+  ok=0
+  for EP in "https://overpass-api.de/api/interpreter" \
+            "https://maps.mail.ru/osm/tools/overpass/api/interpreter" \
+            "https://overpass.kumi.systems/api/interpreter"; do
+    echo "-- $EP"
+    if curl -fsS --max-time 900 -o data/osm/thessaloniki.json --data-urlencode "data=$Q" "$EP" \
+       && grep -q '"elements"' data/osm/thessaloniki.json; then
+      ok=1; break
+    fi
+  done
+  [ "$ok" = 1 ] || { echo "Overpass: all mirrors failed" >&2; exit 1; }
+fi
+
+# 2b) OSM — metro tunnels (separate graph). Only railway=subway: Line 1 runs
+#     entirely underground, and keeping mainline rail out of the graph stops the
+#     matcher from straying onto the OSE tracks beside New Railway Station.
+if [ ! -f data/osm/thessaloniki-rail.json ]; then
+  echo "== Overpass (metro tunnels) =="
+  QT='[out:json][timeout:300];way(40.50,22.80,40.72,23.10)["railway"="subway"];out geom;'
+  ok=0
+  for EP in "https://overpass-api.de/api/interpreter" \
+            "https://maps.mail.ru/osm/tools/overpass/api/interpreter" \
+            "https://overpass.kumi.systems/api/interpreter"; do
+    echo "-- $EP"
+    if curl -fsS --max-time 300 -o data/osm/thessaloniki-rail.json --data-urlencode "data=$QT" "$EP" \
+       && grep -q '"elements"' data/osm/thessaloniki-rail.json; then
+      ok=1; break
+    fi
+  done
+  [ "$ok" = 1 ] || { echo "Overpass (rail): all mirrors failed" >&2; exit 1; }
+fi
+
+# 2c) OSM — metro line relations plus their station members (metro-feed.mjs input).
+#     The relations list railway=stop / public_transport=stop_position nodes, which
+#     is what we want: unlike station nodes (placed over the entrances) these sit
+#     exactly on the tunnel axis, so they snap onto the graph with no slack.
+if [ ! -f data/osm/thessaloniki-metro.json ]; then
+  echo "== Overpass (metro relations) =="
+  QR='[out:json][timeout:300];rel(40.50,22.80,40.72,23.10)["type"="route"]["route"="subway"]->.r;.r out body;node(r.r);out;'
+  ok=0
+  for EP in "https://overpass-api.de/api/interpreter" \
+            "https://maps.mail.ru/osm/tools/overpass/api/interpreter" \
+            "https://overpass.kumi.systems/api/interpreter"; do
+    echo "-- $EP"
+    if curl -fsS --max-time 300 -o data/osm/thessaloniki-metro.json --data-urlencode "data=$QR" "$EP" \
+       && grep -q '"elements"' data/osm/thessaloniki-metro.json; then
+      ok=1; break
+    fi
+  done
+  [ "$ok" = 1 ] || { echo "Overpass (metro relations): all mirrors failed" >&2; exit 1; }
+fi
+
+# 2d) synthesize the metro GTFS feed out of those relations
+if [ ! -f data/gtfs-t/routes.txt ]; then
+  echo "== metro feed (synthesized) =="
+  node pipeline/metro-feed.mjs
+fi
+
+# 3) MapLibre GL (vendored, no CDN at runtime)
+if [ ! -f web/vendor/maplibre-gl.js ]; then
+  echo "== MapLibre GL =="
+  curl -fL --retry 3 -o web/vendor/maplibre-gl.js  https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js
+  curl -fL --retry 3 -o web/vendor/maplibre-gl.css https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css
+fi
+
+echo "OK — data ready:"
+du -sh data/oseth_gtfs.zip data/osm/thessaloniki.json data/osm/thessaloniki-rail.json web/vendor/maplibre-gl.js 2>/dev/null || true
