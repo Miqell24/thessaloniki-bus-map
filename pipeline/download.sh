@@ -36,7 +36,29 @@ if [ ! -f data/osm/thessaloniki.json ]; then
   [ "$ok" = 1 ] || { echo "Overpass: all mirrors failed" >&2; exit 1; }
 fi
 
-# 2b) OSM — metro tunnels (separate graph). Only railway=subway: Line 1 runs
+# 2b) OSM — every NAMED feature in the same bbox, tags only. Not geometry: this
+#     is the accent dictionary. The GTFS shouts its stop names in capitals, and
+#     Greek writes accents only in lowercase, so the feed cannot tell us that
+#     ΑΤΤΙΚΗΣ is Αττικής — but OSM spells the same words properly on streets,
+#     squares, districts and churches. See pipeline/lib/greek.mjs.
+if [ ! -f data/osm/thessaloniki-names.json ]; then
+  echo "== Overpass (names for the Greek dictionary) =="
+  QN='[out:json][timeout:600];nwr(40.34,22.52,41.00,23.27)[name][~"^(amenity|place|tourism|leisure|shop|building|railway|public_transport|natural|waterway|landuse|historic|office|man_made)$"~"."];out tags;'
+  ok=0
+  for EP in "https://overpass-api.de/api/interpreter" \
+            "https://maps.mail.ru/osm/tools/overpass/api/interpreter" \
+            "https://overpass.kumi.systems/api/interpreter"; do
+    echo "-- $EP"
+    if curl -fsS --max-time 600 -o data/osm/thessaloniki-names.json --data-urlencode "data=$QN" "$EP" \
+       && grep -q '"elements"' data/osm/thessaloniki-names.json; then
+      ok=1; break
+    fi
+  done
+  # not fatal: without it the stop names simply come out unaccented
+  [ "$ok" = 1 ] || echo "Overpass (names): all mirrors failed — stop names will lose their accents" >&2
+fi
+
+# 2c) OSM — metro tunnels (separate graph). Only railway=subway: Line 1 runs
 #     entirely underground, and keeping mainline rail out of the graph stops the
 #     matcher from straying onto the OSE tracks beside New Railway Station.
 if [ ! -f data/osm/thessaloniki-rail.json ]; then
@@ -55,7 +77,7 @@ if [ ! -f data/osm/thessaloniki-rail.json ]; then
   [ "$ok" = 1 ] || { echo "Overpass (rail): all mirrors failed" >&2; exit 1; }
 fi
 
-# 2c) OSM — metro line relations plus their station members (metro-feed.mjs input).
+# 2d) OSM — metro line relations plus their station members (metro-feed.mjs input).
 #     The relations list railway=stop / public_transport=stop_position nodes, which
 #     is what we want: unlike station nodes (placed over the entrances) these sit
 #     exactly on the tunnel axis, so they snap onto the graph with no slack.
@@ -75,13 +97,13 @@ if [ ! -f data/osm/thessaloniki-metro.json ]; then
   [ "$ok" = 1 ] || { echo "Overpass (metro relations): all mirrors failed" >&2; exit 1; }
 fi
 
-# 2d) synthesize the metro GTFS feed out of those relations
+# 3) synthesize the metro GTFS feed out of those relations
 if [ ! -f data/gtfs-t/routes.txt ]; then
   echo "== metro feed (synthesized) =="
   node pipeline/metro-feed.mjs
 fi
 
-# 3) MapLibre GL (vendored, no CDN at runtime)
+# 4) MapLibre GL (vendored, no CDN at runtime)
 if [ ! -f web/vendor/maplibre-gl.js ]; then
   echo "== MapLibre GL =="
   curl -fL --retry 3 -o web/vendor/maplibre-gl.js  https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js
