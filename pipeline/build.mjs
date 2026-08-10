@@ -772,27 +772,101 @@ const metaLines = results.flatMap((r) => r.metaLines);
   };
   const busGrid = gridOf(busF), tramGrid = gridOf(tramF);
   const adopted = new Set(); // bus runs whose numbers were taken over by some track
+  // The adopted numbers are POSITIONAL. One union stamped on the whole run
+  // listed every bus that shares any 60 m of a multi-km track somewhere along
+  // it — at Słomiana the Kapelanka track printed 14 bus lines where 3 ride
+  // (user report). So after the run-level qualification (which still filters
+  // out crossing streets) the run is cut into stretches of constant
+  // nearby-line set, and every piece carries only the numbers of the roadway
+  // really beside it. Sub-75 m blips of the set are geometry noise (platform
+  // bulges, stop islands), not a corridor change — absorbed by neighbours.
+  const splitRuns = new Map(); // original tram feature → replacement pieces
   for (const o of tramF) {
     const smp = samplesOf(o.xy);
     if (smp.length < 2) continue;
     const nearLen = new Map();
+    const perSample = [];
     let nearAny = 0;
     for (const [x, y] of smp) {
       const hit = nearAt(busGrid, x, y);
       if (hit.size) nearAny++;
       for (const oi of hit) nearLen.set(oi, (nearLen.get(oi) || 0) + STEP);
+      perSample.push(hit);
     }
     if (nearAny / smp.length < 0.55) continue;
-    const lines = new Set();
+    const qualified = new Set();
     for (const [oi, L] of nearLen) {
       const b = busF[oi];
       // brief brushes (intersections) do not count as a shared corridor
       if (L >= Math.max(60, 0.35 * Math.min(o.len, b.len))) {
-        for (const s of b.f.properties.lines.split(', ')) lines.add(s);
+        qualified.add(oi);
         adopted.add(oi);
       }
     }
-    if (lines.size) o.f.properties.busLines = [...lines].sort(numSort).join(', ');
+    if (!qualified.size) continue;
+    // per-sample set: only the qualified roadways actually within reach HERE
+    const setAt = perSample.map((hit) => {
+      const ls = new Set();
+      for (const oi of hit) if (qualified.has(oi))
+        for (const s of busF[oi].f.properties.lines.split(', ')) ls.add(s);
+      return [...ls].sort(numSort).join(', ');
+    });
+    // maximal blocks of one set, then despeckle the sub-3-sample blips
+    const blocks = [];
+    for (let i = 0; i < setAt.length; i++) {
+      if (blocks.length && blocks[blocks.length - 1].key === setAt[i]) blocks[blocks.length - 1].i1 = i;
+      else blocks.push({ key: setAt[i], i0: i, i1: i });
+    }
+    for (let changed = true; changed && blocks.length > 1;) {
+      changed = false;
+      for (let bi = 0; bi < blocks.length; bi++) {
+        if (blocks[bi].i1 - blocks[bi].i0 + 1 >= 3) continue;
+        const prev = blocks[bi - 1], next = blocks[bi + 1];
+        if (prev && next && prev.key === next.key) { prev.i1 = next.i1; blocks.splice(bi, 2); }
+        else if (!prev && next) { next.i0 = blocks[bi].i0; blocks.splice(bi, 1); }
+        else if (!next && prev) { prev.i1 = blocks[bi].i1; blocks.splice(bi, 1); }
+        else continue;
+        changed = true;
+        break;
+      }
+    }
+    if (blocks.length === 1) {
+      if (blocks[0].key) o.f.properties.busLines = blocks[0].key;
+      continue;
+    }
+    // cut the geometry midway between neighbouring blocks' outermost samples
+    const coords = o.f.geometry.coordinates;
+    const cum = [0];
+    for (let i = 1; i < o.xy.length; i++)
+      cum.push(cum[i - 1] + Math.hypot(o.xy[i][0] - o.xy[i - 1][0], o.xy[i][1] - o.xy[i - 1][1]));
+    const total = cum[cum.length - 1];
+    const pointAt = (d) => {
+      let i = 1;
+      while (i < cum.length - 1 && cum[i] < d) i++;
+      const L = cum[i] - cum[i - 1];
+      const t = L ? Math.min(1, Math.max(0, (d - cum[i - 1]) / L)) : 0;
+      return [round6(coords[i - 1][0] + t * (coords[i][0] - coords[i - 1][0])),
+              round6(coords[i - 1][1] + t * (coords[i][1] - coords[i - 1][1]))];
+    };
+    const pieces = [];
+    for (let bi = 0; bi < blocks.length; bi++) {
+      const d0 = bi === 0 ? 0 : (blocks[bi - 1].i1 + blocks[bi].i0) / 2 * STEP;
+      const d1 = bi === blocks.length - 1 ? total : (blocks[bi].i1 + blocks[bi + 1].i0) / 2 * STEP;
+      if (d1 - d0 < 1) continue;
+      const cs = [pointAt(d0)];
+      for (let i = 0; i < coords.length; i++) if (cum[i] > d0 && cum[i] < d1) cs.push(coords[i]);
+      cs.push(pointAt(d1));
+      const props = { ...o.f.properties };
+      delete props.busLines;
+      if (blocks[bi].key) props.busLines = blocks[bi].key;
+      pieces.push({ type: 'Feature', geometry: { type: 'LineString', coordinates: cs }, properties: props });
+    }
+    if (pieces.length) splitRuns.set(o.f, pieces);
+  }
+  if (splitRuns.size) {
+    const rebuilt = streetFeatures.flatMap((f) => splitRuns.get(f) || [f]);
+    streetFeatures.length = 0;
+    streetFeatures.push(...rebuilt);
   }
   busF.forEach((o, oi) => {
     if (!adopted.has(oi)) return; // numbers not adopted anywhere — the label stays
@@ -877,20 +951,82 @@ const metaLines = results.flatMap((r) => r.metaLines);
     let ang = Math.atan2(-dy, dx) * 180 / Math.PI; // clockwise degrees, screen y downwards
     if (ang > 90) ang -= 180;   // normalization: text never upside down
     if (ang < -90) ang += 180;
-    return { c, ang };
+    return { c, ang, dx, dy };
   };
-  // A corridor label listing 50 lines is unreadable and kilometers long — the
-  // display caps at 12 + a "+N" tail (`arr` stays complete: the frontend
-  // filters and highlights on it).
-  const capList = (s) => {
-    const a = s.split(', ');
-    return a.length > 14 ? a.slice(0, 12).join(', ') + ' +' + (a.length - 12) : s;
-  };
-  for (const g of groups.values()) {
+  // A corridor label listing 20+ lines is unreadable, and the old cap
+  // ("… 503 +9") told nobody what the tail meant (user report, Karmelicka).
+  // Printed-map convention instead: the street carries a short REFERENCE
+  // marker (A*, B*, …) parallel to its axis, and the full list is printed
+  // FLAT (angle 0) beside the corridor as "A*: 124, 139, …" — once per
+  // reference every ~600 m, tagged extra:1 so it appears from z13 and ranks
+  // below the once-per-street markers. `arr` stays complete either way.
+  const REF_CAP = 14;
+  // The first cut lettered every exact list — a dual carriageway plus the set
+  // drifting by one line at each junction gave EIGHT letters with eight
+  // near-identical 20-number lists along one avenue, which read worse than the
+  // "+9" they replaced. So references are per STREET: the long-list groups of
+  // one name within 1.2 km share a letter, and the printed list is their
+  // union — still nothing but lines that really ride that street.
+  const refByPart = new Map(); // `${gKey}|L` / `${gKey}|B` → { mark, list }
+  {
+    const entries = [];
+    for (const [gKey, g] of groups) {
+      const p = g.best.f.properties;
+      const name = gKey.slice(0, gKey.indexOf('|'));
+      const mid = g.best.xy[Math.floor(g.best.xy.length / 2)];
+      for (const [part, list] of [['L', p.lines], ['B', p.busLines || '']]) {
+        if (!list || list.split(', ').length <= REF_CAP) continue;
+        entries.push({ key: gKey + '|' + part, name, mid, list });
+      }
+    }
+    const parent = entries.map((_, i) => i);
+    const find = (i) => (parent[i] === i ? i : (parent[i] = find(parent[i])));
+    for (let i = 0; i < entries.length; i++)
+      for (let j = i + 1; j < entries.length; j++) {
+        if (entries[i].name !== entries[j].name) continue;
+        if (Math.hypot(entries[i].mid[0] - entries[j].mid[0], entries[i].mid[1] - entries[j].mid[1]) < 1200)
+          parent[find(i)] = find(j);
+      }
+    const clusters = new Map();
+    entries.forEach((e, i) => {
+      const r = find(i);
+      if (!clusters.has(r)) clusters.set(r, []);
+      clusters.get(r).push(e);
+    });
+    let seq = 0;
+    for (const c of clusters.values()) {
+      const mark = (seq >= 26 ? String.fromCharCode(64 + Math.floor(seq / 26)) : '') + String.fromCharCode(65 + (seq % 26)) + '*';
+      seq++;
+      const union = [...new Set(c.flatMap((e) => e.list.split(', ')))].sort(numSort).join(', ');
+      for (const e of c) refByPart.set(e.key, { mark, list: union });
+    }
+  }
+  const refSpots = new Map(); // marker → XY points where its list is printed
+  for (const [gKey, g] of groups) {
     const p = g.best.f.properties;
     const arr = p.busLines ? [...p.lines.split(', '), ...p.busLines.split(', ')] : p.lines.split(', ');
-    const baseProps = { lines: capList(p.lines), color: p.color, mode: p.mode, arr };
-    if (p.busLines) baseProps.busLines = capList(p.busLines);
+    const refL = refByPart.get(gKey + '|L');
+    const refB = refByPart.get(gKey + '|B');
+    const baseProps = { lines: refL ? refL.mark : p.lines, color: p.color, mode: p.mode, arr };
+    if (p.busLines) baseProps.busLines = refB ? refB.mark : p.busLines;
+    const emitExpl = (placed) => {
+      for (const [ref, ownColor] of [[refL, p.color], [refB, null]]) {
+        if (!ref) continue;
+        const spots = refSpots.get(ref.mark) || [];
+        if (spots.some(([sx, sy]) => Math.hypot(sx - placed.c.x, sy - placed.c.y) < 600)) continue;
+        // the flat block sits 42 m to the side of the street axis
+        const L = Math.hypot(placed.dx, placed.dy) || 1;
+        const ex = placed.c.x - (placed.dy / L) * 42, ey = placed.c.y + (placed.dx / L) * 42;
+        const [elon, elat] = P.toLonLat(ex, ey);
+        // arr = the union, so a single-line filter keeps the list it is on
+        const props = { lines: ref.mark + ': ' + ref.list, mode: p.mode, arr: ref.list.split(', '), angle: 0, expl: 1 };
+        // the bus-part list keeps the frontend's default navy (no color prop)
+        if (ownColor) props.color = ownColor;
+        labelFeatures.push({ type: 'Feature', geometry: { type: 'Point', coordinates: [round6(elon), round6(elat)] }, properties: props });
+        spots.push([ex, ey]);
+        refSpots.set(ref.mark, spots);
+      }
+    };
     const anchors = [];
     const emit = (placed, extra) => {
       const props = { ...baseProps, angle: Math.round(placed.ang * 10) / 10 };
@@ -924,6 +1060,7 @@ const metaLines = results.flatMap((r) => r.metaLines);
         if (!placed) continue;
         if (anchors.some(([ax, ay]) => Math.hypot(ax - placed.c.x, ay - placed.c.y) < MAIN_EXCL)) continue;
         emit(placed, false);
+        emitExpl(placed);
         labeled.push(e.xy);
         break;
       }
@@ -938,9 +1075,10 @@ const metaLines = results.flatMap((r) => r.metaLines);
       }
     }
   }
-  const nShared = tramF.filter((o) => o.f.properties.busLines).length;
+  const nShared = streetFeatures.filter((f) => f.properties.mode === 'tram' && f.properties.busLines).length;
   log(`Labels: ${nShared} shared bus+tram segments, ${busF.filter((o) => o.f.properties.nolabel).length} roadways hand their numbers to tracks, ` +
-      `${labelFeatures.length} number labels (${labelFeatures.filter((f) => f.properties.extra).length} zoom-in repeats)`);
+      `${labelFeatures.length} number labels (${labelFeatures.filter((f) => f.properties.extra).length} zoom-in repeats), ` +
+      `${new Set([...refByPart.values()].map((r) => r.mark)).size} list references (${labelFeatures.filter((f) => f.properties.expl).length} printed lists)`);
 }
 
 // ---------- 11) terminus line badges: grids fuse into one complex when they collide ----------
