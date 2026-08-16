@@ -9,6 +9,27 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p data/gtfs data/gtfs-t data/osm web/vendor
 
+# A downloaded extract is only accepted if it PARSES and carries a plausible
+# number of elements. `grep -q '"elements"'` — the guard this family used
+# everywhere — passes on a truncated response too: Brașov's roads arrived as a
+# 65 kB fragment that still contained the string, was taken for complete, and
+# silently skipped the city (16.08.2026).
+# The minimum differs by extract, so the caller passes its own floor: the roads
+# run to 49 k ways, but the metro is one line — 62 tunnel ways and 44 relation
+# members — so anything above 20 would reject a perfectly good download.
+# A rejected file is deleted rather than left behind — the `[ ! -f … ]` gates
+# below only ask whether the file exists, so a fragment on disk would be taken
+# for a finished download on the next run.
+ok_json () { # $1=file  $2=minimum element count
+  python3 - "$1" "$2" <<'PYEOF' 2>/dev/null
+import json, sys
+try:
+    sys.exit(0 if len(json.load(open(sys.argv[1])).get("elements", [])) >= int(sys.argv[2]) else 1)
+except Exception:
+    sys.exit(1)
+PYEOF
+}
+
 # 1) GTFS — OSETH buses, published on data.gov.gr in ~2-week validity slices.
 #    This is the slice valid 14/07/2026-03/08/2026 (published 17.07.2026); newer
 #    slices show up as new resources of dataset 42c9a7da-c86c-48b1-914c-f340e8bef00d.
@@ -29,11 +50,11 @@ if [ ! -f data/osm/thessaloniki.json ]; then
             "https://overpass.kumi.systems/api/interpreter"; do
     echo "-- $EP"
     if curl -fsS --max-time 900 -o data/osm/thessaloniki.json --data-urlencode "data=$Q" "$EP" \
-       && grep -q '"elements"' data/osm/thessaloniki.json; then
+       && ok_json "data/osm/thessaloniki.json" 2000; then
       ok=1; break
     fi
   done
-  [ "$ok" = 1 ] || { echo "Overpass: all mirrors failed" >&2; exit 1; }
+  [ "$ok" = 1 ] || { rm -f data/osm/thessaloniki.json; echo "Overpass: all mirrors failed" >&2; exit 1; }
 fi
 
 # 2b) OSM — every NAMED feature in the same bbox, tags only. Not geometry: this
@@ -50,12 +71,12 @@ if [ ! -f data/osm/thessaloniki-names.json ]; then
             "https://overpass.kumi.systems/api/interpreter"; do
     echo "-- $EP"
     if curl -fsS --max-time 600 -o data/osm/thessaloniki-names.json --data-urlencode "data=$QN" "$EP" \
-       && grep -q '"elements"' data/osm/thessaloniki-names.json; then
+       && ok_json "data/osm/thessaloniki-names.json" 2000; then
       ok=1; break
     fi
   done
   # not fatal: without it the stop names simply come out unaccented
-  [ "$ok" = 1 ] || echo "Overpass (names): all mirrors failed — stop names will lose their accents" >&2
+  [ "$ok" = 1 ] || { rm -f data/osm/thessaloniki-names.json; echo "Overpass (names): all mirrors failed — stop names will lose their accents" >&2; }
 fi
 
 # 2c) OSM — metro tunnels (separate graph). Only railway=subway: Line 1 runs
@@ -70,11 +91,11 @@ if [ ! -f data/osm/thessaloniki-rail.json ]; then
             "https://overpass.kumi.systems/api/interpreter"; do
     echo "-- $EP"
     if curl -fsS --max-time 300 -o data/osm/thessaloniki-rail.json --data-urlencode "data=$QT" "$EP" \
-       && grep -q '"elements"' data/osm/thessaloniki-rail.json; then
+       && ok_json "data/osm/thessaloniki-rail.json" 20; then
       ok=1; break
     fi
   done
-  [ "$ok" = 1 ] || { echo "Overpass (rail): all mirrors failed" >&2; exit 1; }
+  [ "$ok" = 1 ] || { rm -f data/osm/thessaloniki-rail.json; echo "Overpass (rail): all mirrors failed" >&2; exit 1; }
 fi
 
 # 2d) OSM — metro line relations plus their station members (metro-feed.mjs input).
@@ -90,11 +111,11 @@ if [ ! -f data/osm/thessaloniki-metro.json ]; then
             "https://overpass.kumi.systems/api/interpreter"; do
     echo "-- $EP"
     if curl -fsS --max-time 300 -o data/osm/thessaloniki-metro.json --data-urlencode "data=$QR" "$EP" \
-       && grep -q '"elements"' data/osm/thessaloniki-metro.json; then
+       && ok_json "data/osm/thessaloniki-metro.json" 20; then
       ok=1; break
     fi
   done
-  [ "$ok" = 1 ] || { echo "Overpass (metro relations): all mirrors failed" >&2; exit 1; }
+  [ "$ok" = 1 ] || { rm -f data/osm/thessaloniki-metro.json; echo "Overpass (metro relations): all mirrors failed" >&2; exit 1; }
 fi
 
 # 3) synthesize the metro GTFS feed out of those relations
