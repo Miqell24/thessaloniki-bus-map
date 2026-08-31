@@ -17,6 +17,20 @@ import { buildNameDict, greekTitleCase, latinize } from './lib/greek.mjs';
 import { matchShape, extendToStops } from './lib/hmm.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+
+// Latin-lettered names greekTitleCase leaves alone by design (a pure-Latin
+// token may really be Latin) — the multi-word ones are plain names, not
+// brands, and get exact-match mixed case. Single-token brands (LIDL, JUMBO,
+// AMSTEL, PRAKTIKER) keep their shop-sign capitals.
+const NAME_FIX = {
+  'CASA BIANCA': 'Casa Bianca',
+  'MEDITERRANEAN COSMOS': 'Mediterranean Cosmos',
+  'SUN BEACH': 'Sun Beach',
+  'FRUIT BANK': 'Fruit Bank',
+  'PHOTO ALBUM': 'Photo Album',
+  'EURO - HOUSE': 'Euro - House',
+  'FIERRA S.A.': 'Fierra S.A.',
+};
 // m — longer jumps between shape points are GTFS data gaps. The OSETH feed samples
 // shapes densely (median ~14 m, p95 ~86 m), so the threshold sits just above the
 // normal spacing; chords up to 120 m get interpolated observations instead.
@@ -252,7 +266,7 @@ async function processMode(cfg) {
   for (const s of await readCsv(join(ROOT, cfg.gtfsDir, 'stops.txt'))) {
     // feed names carry double spaces here and there — collapse for clean labels
     const name = (s.stop_name || '').replace(/\s+/g, ' ').trim();
-    const shown = greekTitleCase(name, nameDict);
+    const shown = NAME_FIX[name] || greekTitleCase(name, nameDict);
     stopsById.set(s.stop_id, { name: shown, lat: Number(s.stop_lat), lon: Number(s.stop_lon) });
   }
 
