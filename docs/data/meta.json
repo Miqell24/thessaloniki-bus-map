@@ -88,7 +88,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "01A",
@@ -137,105 +138,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "01N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "Κ.Τ.Ε.Λ. - ΑΕΡΟΔΡΟΜΙΟ ΝΥΧΤΕΡΙΝΟ",
-          "variants": 1,
-          "tripCount": 7,
-          "stops": 52,
-          "lengthKm": 21.56,
-          "stats": {
-            "observations": 942,
-            "matched": 942,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.7011753634724835,
-            "roundaboutSegs": 23,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "ΑΕΡΟΔΡΟΜΙΟ - Κ.Τ.Ε.Λ. ΝΥΧΤΕΡΙΝΟ",
-          "variants": 1,
-          "tripCount": 12,
-          "stops": 51,
-          "lengthKm": 20.83,
-          "stats": {
-            "observations": 929,
-            "matched": 929,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.7331976343004384,
-            "roundaboutSegs": 72,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
-    },
-    {
-      "line": "1N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "Κ.Τ.Ε.Λ. - ΑΕΡΟΔΡΟΜΙΟ ΜΕΣΩ Α.Σ. Ι.Κ.Ε.Α.",
-          "variants": 1,
-          "tripCount": 8,
-          "stops": 53,
-          "lengthKm": 22.11,
-          "stats": {
-            "observations": 970,
-            "matched": 970,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.7116592093803947,
-            "roundaboutSegs": 23,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "ΑΕΡΟΔΡΟΜΙΟ - Κ.Τ.Ε.Λ.  ΜΕΣΩ Α.Σ. Ι.Κ.Ε.Α.",
-          "variants": 1,
-          "tripCount": 3,
-          "stops": 52,
-          "lengthKm": 20.83,
-          "stats": {
-            "observations": 929,
-            "matched": 929,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.7332779113697793,
-            "roundaboutSegs": 72,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "01X",
@@ -284,7 +188,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "02K",
@@ -333,7 +238,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "02X",
@@ -382,7 +288,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "03K",
@@ -431,7 +338,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "04A",
@@ -459,7 +367,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "04B",
@@ -487,7 +396,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "05",
@@ -536,7 +446,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "05A",
@@ -585,7 +496,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "05B",
@@ -613,7 +525,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "06",
@@ -662,7 +575,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "07",
@@ -711,7 +625,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "09",
@@ -739,7 +654,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "10",
@@ -788,7 +704,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "11",
@@ -837,7 +754,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "11B",
@@ -886,7 +804,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "11E",
@@ -935,7 +854,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "11M",
@@ -984,7 +904,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "11T",
@@ -1033,7 +954,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "12",
@@ -1082,7 +1004,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "14",
@@ -1110,7 +1033,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "14A",
@@ -1138,7 +1062,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "15",
@@ -1187,7 +1112,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "16",
@@ -1215,7 +1141,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "17",
@@ -1264,7 +1191,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "18",
@@ -1313,7 +1241,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "19",
@@ -1362,7 +1291,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "19A",
@@ -1390,7 +1320,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "20",
@@ -1439,7 +1370,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "21",
@@ -1488,7 +1420,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "22",
@@ -1516,7 +1449,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "23",
@@ -1565,7 +1499,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "24",
@@ -1614,7 +1549,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "25",
@@ -1663,7 +1599,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "26",
@@ -1712,7 +1649,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "27",
@@ -1761,7 +1699,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "28",
@@ -1810,7 +1749,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "29",
@@ -1859,7 +1799,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "29A",
@@ -1887,7 +1828,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "30",
@@ -1936,7 +1878,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "31",
@@ -1985,7 +1928,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "32",
@@ -2034,7 +1978,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "32A",
@@ -2083,56 +2028,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "32N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "Κ. ΗΛΙΟΥΠΟΛΗ-ΙΠΠΟΚΡΑΤΕΙΟ (ΕΚΤΡΟΠΗ)",
-          "variants": 2,
-          "tripCount": 6,
-          "stops": 43,
-          "lengthKm": 14.46,
-          "stats": {
-            "observations": 686,
-            "matched": 686,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.25814308841397937,
-            "roundaboutSegs": 0,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "ΙΠΠΟΚΡΑΤΕΙΟ-Κ. ΗΛΙΟΥΠΟΛΗ",
-          "variants": 1,
-          "tripCount": 9,
-          "stops": 45,
-          "lengthKm": 14.11,
-          "stats": {
-            "observations": 691,
-            "matched": 691,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.21300570856200493,
-            "roundaboutSegs": 13,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "33",
@@ -2181,7 +2078,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "33A",
@@ -2209,7 +2107,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "33B",
@@ -2237,7 +2136,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "34",
@@ -2286,7 +2186,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "34A",
@@ -2314,7 +2215,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "35",
@@ -2363,7 +2265,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "36",
@@ -2412,7 +2315,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "36A",
@@ -2440,7 +2344,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "36B",
@@ -2468,7 +2373,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "36E",
@@ -2496,7 +2402,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "36H",
@@ -2524,7 +2431,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "36K",
@@ -2552,35 +2460,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "36N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "ΒΟΥΛΓΑΡΗ - ΚΟΣΜΟΣ",
-          "variants": 1,
-          "tripCount": 6,
-          "stops": 8,
-          "lengthKm": 13.7,
-          "stats": {
-            "observations": 528,
-            "matched": 528,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.6278262063156319,
-            "roundaboutSegs": 25,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "36P",
@@ -2608,7 +2489,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "36T",
@@ -2636,7 +2518,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "36X",
@@ -2685,7 +2568,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "36Y",
@@ -2713,7 +2597,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "36Z",
@@ -2741,7 +2626,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "37",
@@ -2790,7 +2676,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "38",
@@ -2839,7 +2726,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "39",
@@ -2888,7 +2776,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "39A",
@@ -2937,7 +2826,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "39B",
@@ -2965,7 +2855,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "40",
@@ -3014,7 +2905,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "40A",
@@ -3042,7 +2934,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "40K",
@@ -3070,7 +2963,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "42",
@@ -3119,7 +3013,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "42A",
@@ -3168,7 +3063,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "42B",
@@ -3217,7 +3113,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "43",
@@ -3245,7 +3142,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "43Y",
@@ -3294,7 +3192,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "45",
@@ -3343,7 +3242,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "45A",
@@ -3392,7 +3292,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "45B",
@@ -3441,7 +3342,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "45Y",
@@ -3490,7 +3392,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "50",
@@ -3518,7 +3421,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "51",
@@ -3567,7 +3471,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "51A",
@@ -3595,7 +3500,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "51B",
@@ -3623,7 +3529,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "52",
@@ -3672,7 +3579,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "52B",
@@ -3721,7 +3629,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "53",
@@ -3749,7 +3658,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "53A",
@@ -3777,7 +3687,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "53B",
@@ -3805,7 +3716,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "53Σ",
@@ -3833,7 +3745,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "54",
@@ -3882,7 +3795,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "54A",
@@ -3910,7 +3824,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "55",
@@ -3938,7 +3853,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "55B",
@@ -3966,7 +3882,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "55E",
@@ -3994,7 +3911,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "55K",
@@ -4043,7 +3961,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "55M",
@@ -4071,35 +3990,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "55N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "ΣΤΑΥΡΟΥΠΟΛΗ - ΙΩΝΙΑ - ΚΟΙΜΗΤΗΡΙΑ",
-          "variants": 1,
-          "tripCount": 1,
-          "stops": 44,
-          "lengthKm": 20.66,
-          "stats": {
-            "observations": 965,
-            "matched": 965,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.27730843095065333,
-            "roundaboutSegs": 0,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "55P",
@@ -4127,7 +4019,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "55X",
@@ -4176,7 +4069,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "55Y",
@@ -4225,7 +4119,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "56",
@@ -4274,7 +4169,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "57",
@@ -4323,7 +4219,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "58",
@@ -4372,7 +4269,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "58Μ",
@@ -4400,7 +4298,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "59",
@@ -4428,7 +4327,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "59K",
@@ -4456,7 +4356,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "60A",
@@ -4484,7 +4385,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "60B",
@@ -4512,7 +4414,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "60E",
@@ -4561,7 +4464,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "61",
@@ -4610,7 +4514,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "64",
@@ -4659,7 +4564,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "64A",
@@ -4708,7 +4614,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "64B",
@@ -4757,7 +4664,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "66",
@@ -4806,7 +4714,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "67",
@@ -4855,7 +4764,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "67A",
@@ -4883,7 +4793,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "67B",
@@ -4932,7 +4843,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "68A",
@@ -4960,7 +4872,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "68B",
@@ -4988,7 +4901,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "69A",
@@ -5037,7 +4951,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "69B",
@@ -5086,7 +5001,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "69H",
@@ -5135,56 +5051,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "69N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "ΙΚΕΑ-ΕΠΑΝΟΜΗ-ΝΤΟΥΡΑΚΙ",
-          "variants": 1,
-          "tripCount": 6,
-          "stops": 54,
-          "lengthKm": 29.88,
-          "stats": {
-            "observations": 1363,
-            "matched": 1363,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.20085961942936384,
-            "roundaboutSegs": 0,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "ΝΤΟΥΡΑΚΙ - ΕΠΑΝΟΜΗ - ΙΚΕΑ",
-          "variants": 1,
-          "tripCount": 6,
-          "stops": 56,
-          "lengthKm": 29.42,
-          "stats": {
-            "observations": 1335,
-            "matched": 1335,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.196949505642597,
-            "roundaboutSegs": 0,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "70",
@@ -5233,7 +5101,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "70A",
@@ -5282,7 +5151,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "71",
@@ -5331,7 +5201,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "71A",
@@ -5380,7 +5251,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "72",
@@ -5429,7 +5301,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "72A",
@@ -5478,7 +5351,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "72B",
@@ -5506,7 +5380,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "72E",
@@ -5534,7 +5409,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "76",
@@ -5583,7 +5459,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "76A",
@@ -5611,7 +5488,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "77",
@@ -5660,7 +5538,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "77H",
@@ -5709,7 +5588,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "79A",
@@ -5737,7 +5617,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "79B",
@@ -5765,7 +5646,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "79K",
@@ -5793,7 +5675,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "79X",
@@ -5842,7 +5725,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "80",
@@ -5891,7 +5775,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "80A",
@@ -5919,7 +5804,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "80B",
@@ -5947,7 +5833,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "80E",
@@ -5975,7 +5862,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "80Z",
@@ -6003,7 +5891,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "81A",
@@ -6031,7 +5920,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "81B",
@@ -6059,7 +5949,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "81E",
@@ -6087,7 +5978,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "81K",
@@ -6115,7 +6007,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "82A",
@@ -6143,7 +6036,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "82B",
@@ -6171,7 +6065,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "82E",
@@ -6199,7 +6094,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "82K",
@@ -6227,7 +6123,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "82M",
@@ -6255,35 +6152,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "82N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "1",
-          "headsign": "ΜΟΝΟΛΟΦΟΣ - Κ.Τ.Ε.Λ",
-          "variants": 1,
-          "tripCount": 1,
-          "stops": 63,
-          "lengthKm": 39.9,
-          "stats": {
-            "observations": 1852,
-            "matched": 1852,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.22459232444078522,
-            "roundaboutSegs": 62,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "83",
@@ -6332,7 +6202,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "83A",
@@ -6360,7 +6231,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "83B",
@@ -6409,7 +6281,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "83M",
@@ -6437,56 +6310,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "83N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "ΣΤΑΥΡΟΥΠΟΛΗ - ΛΑΓΚΑΔΑΣ (ΟΙΚΙΣΜΟΣ ΠΑΠΑΚΥΡΙΑΖΗ ΜΕΣΩ ΑΝΩ ΛΑΓΥΝΩΝ)",
-          "variants": 1,
-          "tripCount": 14,
-          "stops": 40,
-          "lengthKm": 20.05,
-          "stats": {
-            "observations": 949,
-            "matched": 949,
-            "noCandidates": 0,
-            "viterbiBreaks": 1,
-            "bridged": 0,
-            "rawStretchCount": 1,
-            "rawMeters": 19,
-            "meanError": 0.4514682616622223,
-            "roundaboutSegs": 4,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "ΛΑΓΚΑΔΑΣ - ΣΤΑΥΡΟΥΠΟΛΗ (ΟΙΚΙΣΜΟΣ ΠΑΠΑΚΥΡΙΑΖΗ ΜΕΣΩ ΑΝΩ ΛΑΓΥΝΩΝ)",
-          "variants": 1,
-          "tripCount": 16,
-          "stops": 44,
-          "lengthKm": 21.22,
-          "stats": {
-            "observations": 996,
-            "matched": 996,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.3214161073095483,
-            "roundaboutSegs": 9,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "83X",
@@ -6514,7 +6339,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "84A",
@@ -6563,7 +6389,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "84B",
@@ -6612,7 +6439,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "84M",
@@ -6661,7 +6489,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "85",
@@ -6710,7 +6539,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "85A",
@@ -6738,7 +6568,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "85B",
@@ -6787,7 +6618,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "85H",
@@ -6836,7 +6668,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "85K",
@@ -6885,7 +6718,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "85M",
@@ -6913,56 +6747,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "85N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "ΘΕΣ/ΝΙΚΗ - ΝΙΚΟΠΟΛΗ - ΕΥΑΓΓΕΛΙΣΤΡΙΑ",
-          "variants": 1,
-          "tripCount": 8,
-          "stops": 79,
-          "lengthKm": 64.26,
-          "stats": {
-            "observations": 2612,
-            "matched": 2612,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 1,
-            "rawMeters": 201,
-            "meanError": 0.2924363660745295,
-            "roundaboutSegs": 0,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "ΕΥΑΓΓΕΛΙΣΤΡΙΑ - ΝΙΚΟΠΟΛΗ - ΘΕΣ/ΝΙΚΗ",
-          "variants": 1,
-          "tripCount": 8,
-          "stops": 76,
-          "lengthKm": 64.89,
-          "stats": {
-            "observations": 2604,
-            "matched": 2604,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 1,
-            "rawMeters": 201,
-            "meanError": 0.2596930248591466,
-            "roundaboutSegs": 0,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "85T",
@@ -7011,7 +6797,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "85X",
@@ -7060,7 +6847,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "85Z",
@@ -7109,7 +6897,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "86",
@@ -7137,7 +6926,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "86A",
@@ -7165,7 +6955,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "86B",
@@ -7193,7 +6984,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "86E",
@@ -7221,7 +7013,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "86K",
@@ -7249,7 +7042,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "86M",
@@ -7277,35 +7071,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "86N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "ΛΑΓΥΝΑ - ΑΡΔΑΜΕΡΙ - ΓΕΡΑΚΑΡΟΥ - ΛΑΓΚΑΔΙΚΙΑ",
-          "variants": 1,
-          "tripCount": 3,
-          "stops": 54,
-          "lengthKm": 45.97,
-          "stats": {
-            "observations": 1439,
-            "matched": 1439,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.2626823189647875,
-            "roundaboutSegs": 0,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "86R",
@@ -7333,7 +7100,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "86T",
@@ -7361,7 +7129,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87A",
@@ -7410,7 +7179,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87B",
@@ -7438,7 +7208,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87E",
@@ -7487,7 +7258,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87F",
@@ -7536,7 +7308,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87H",
@@ -7585,7 +7358,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87L",
@@ -7634,7 +7408,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87M",
@@ -7683,56 +7458,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "87N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "ΙΚΕΑ - ΒΑΣΙΛΙΚΑ - ΡΥΣΙΟ - ΑΓ. ΑΝΤΩΝΗΣ",
-          "variants": 1,
-          "tripCount": 2,
-          "stops": 64,
-          "lengthKm": 30.33,
-          "stats": {
-            "observations": 1335,
-            "matched": 1335,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.2684105034141401,
-            "roundaboutSegs": 11,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "ΒΑΣΙΛΙΚΑ - ΑΓ.ΑΝΤΩΝΗΣ - ΡΥΣΙΟ - ΙΚΕΑ",
-          "variants": 1,
-          "tripCount": 2,
-          "stops": 65,
-          "lengthKm": 31.79,
-          "stats": {
-            "observations": 1387,
-            "matched": 1387,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.29289135489809925,
-            "roundaboutSegs": 4,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87P",
@@ -7760,7 +7487,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87Q",
@@ -7788,7 +7516,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87R",
@@ -7837,7 +7566,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87T",
@@ -7865,7 +7595,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87X",
@@ -7893,7 +7624,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "87Z",
@@ -7921,7 +7653,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "88",
@@ -7970,7 +7703,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "88A",
@@ -7998,7 +7732,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "88B",
@@ -8026,7 +7761,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "88E",
@@ -8075,7 +7811,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "88H",
@@ -8103,7 +7840,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "88K",
@@ -8152,7 +7890,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "88M",
@@ -8201,35 +7940,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "88N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "ΙΚΕΑ - ΜΕΣΗΜΕΡΙ ΑΠΟ ΛΑΚΩΜΑ - ΔΥΤ. ΠΑΡΑΠΛΕΥΡΗ",
-          "variants": 1,
-          "tripCount": 3,
-          "stops": 61,
-          "lengthKm": 34.49,
-          "stats": {
-            "observations": 1597,
-            "matched": 1597,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.1939091506664825,
-            "roundaboutSegs": 20,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "89A",
@@ -8278,7 +7990,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "89B",
@@ -8306,7 +8019,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "89E",
@@ -8334,7 +8048,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "89K",
@@ -8362,35 +8077,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "89N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "1",
-          "headsign": "ΑΚΡΟΠΟΤΑΜΟΣ - Δ/ΣΗ ΑΓΙΟΝΕΡΙΟΥ",
-          "variants": 1,
-          "tripCount": 18,
-          "stops": 70,
-          "lengthKm": 43.8,
-          "stats": {
-            "observations": 1788,
-            "matched": 1788,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.20813895337546104,
-            "roundaboutSegs": 62,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "90",
@@ -8439,7 +8127,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "90A",
@@ -8488,7 +8177,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "90E",
@@ -8537,7 +8227,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "91A",
@@ -8586,7 +8277,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "91E",
@@ -8635,7 +8327,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "91H",
@@ -8663,7 +8356,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "91K",
@@ -8712,56 +8406,8 @@
             "extEnd": 0
           }
         }
-      ]
-    },
-    {
-      "line": "91N",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "ΛΑΓΚΑΔΑΣ - ΟΙΚΙΣΜΟΣ ΠΑΠΑΚΥΡΙΑΖΗ",
-          "variants": 1,
-          "tripCount": 6,
-          "stops": 9,
-          "lengthKm": 3.08,
-          "stats": {
-            "observations": 156,
-            "matched": 156,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.2825251215870959,
-            "roundaboutSegs": 4,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "ΟΙΚΙΣΜΟΣ ΠΑΠΑΚΥΡΙΑΖΗ - ΛΑΓΚΑΔΑΣ",
-          "variants": 1,
-          "tripCount": 6,
-          "stops": 12,
-          "lengthKm": 3.83,
-          "stats": {
-            "observations": 184,
-            "matched": 184,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0.29741660473780485,
-            "roundaboutSegs": 9,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "91T",
@@ -8810,7 +8456,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "91X",
@@ -8859,7 +8506,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "91Y",
@@ -8887,7 +8535,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "92",
@@ -8915,7 +8564,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "92A",
@@ -8943,7 +8593,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "92E",
@@ -8971,7 +8622,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     },
     {
       "line": "92P",
@@ -8999,7 +8651,582 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
+    },
+    {
+      "line": "01N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "Κ.Τ.Ε.Λ. - ΑΕΡΟΔΡΟΜΙΟ ΝΥΧΤΕΡΙΝΟ",
+          "variants": 1,
+          "tripCount": 7,
+          "stops": 52,
+          "lengthKm": 21.56,
+          "stats": {
+            "observations": 942,
+            "matched": 942,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.7011753634724835,
+            "roundaboutSegs": 23,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "ΑΕΡΟΔΡΟΜΙΟ - Κ.Τ.Ε.Λ. ΝΥΧΤΕΡΙΝΟ",
+          "variants": 1,
+          "tripCount": 12,
+          "stops": 51,
+          "lengthKm": 20.83,
+          "stats": {
+            "observations": 929,
+            "matched": 929,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.7331976343004384,
+            "roundaboutSegs": 72,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "1N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "Κ.Τ.Ε.Λ. - ΑΕΡΟΔΡΟΜΙΟ ΜΕΣΩ Α.Σ. Ι.Κ.Ε.Α.",
+          "variants": 1,
+          "tripCount": 8,
+          "stops": 53,
+          "lengthKm": 22.11,
+          "stats": {
+            "observations": 970,
+            "matched": 970,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.7116592093803947,
+            "roundaboutSegs": 23,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "ΑΕΡΟΔΡΟΜΙΟ - Κ.Τ.Ε.Λ.  ΜΕΣΩ Α.Σ. Ι.Κ.Ε.Α.",
+          "variants": 1,
+          "tripCount": 3,
+          "stops": 52,
+          "lengthKm": 20.83,
+          "stats": {
+            "observations": 929,
+            "matched": 929,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.7332779113697793,
+            "roundaboutSegs": 72,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "32N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "Κ. ΗΛΙΟΥΠΟΛΗ-ΙΠΠΟΚΡΑΤΕΙΟ (ΕΚΤΡΟΠΗ)",
+          "variants": 2,
+          "tripCount": 6,
+          "stops": 43,
+          "lengthKm": 14.46,
+          "stats": {
+            "observations": 686,
+            "matched": 686,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.25814308841397937,
+            "roundaboutSegs": 0,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "ΙΠΠΟΚΡΑΤΕΙΟ-Κ. ΗΛΙΟΥΠΟΛΗ",
+          "variants": 1,
+          "tripCount": 9,
+          "stops": 45,
+          "lengthKm": 14.11,
+          "stats": {
+            "observations": 691,
+            "matched": 691,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.21300570856200493,
+            "roundaboutSegs": 13,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "36N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "ΒΟΥΛΓΑΡΗ - ΚΟΣΜΟΣ",
+          "variants": 1,
+          "tripCount": 6,
+          "stops": 8,
+          "lengthKm": 13.7,
+          "stats": {
+            "observations": 528,
+            "matched": 528,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.6278262063156319,
+            "roundaboutSegs": 25,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "55N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "ΣΤΑΥΡΟΥΠΟΛΗ - ΙΩΝΙΑ - ΚΟΙΜΗΤΗΡΙΑ",
+          "variants": 1,
+          "tripCount": 1,
+          "stops": 44,
+          "lengthKm": 20.66,
+          "stats": {
+            "observations": 965,
+            "matched": 965,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.27730843095065333,
+            "roundaboutSegs": 0,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "69N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "ΙΚΕΑ-ΕΠΑΝΟΜΗ-ΝΤΟΥΡΑΚΙ",
+          "variants": 1,
+          "tripCount": 6,
+          "stops": 54,
+          "lengthKm": 29.88,
+          "stats": {
+            "observations": 1363,
+            "matched": 1363,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.20085961942936384,
+            "roundaboutSegs": 0,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "ΝΤΟΥΡΑΚΙ - ΕΠΑΝΟΜΗ - ΙΚΕΑ",
+          "variants": 1,
+          "tripCount": 6,
+          "stops": 56,
+          "lengthKm": 29.42,
+          "stats": {
+            "observations": 1335,
+            "matched": 1335,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.196949505642597,
+            "roundaboutSegs": 0,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "82N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "1",
+          "headsign": "ΜΟΝΟΛΟΦΟΣ - Κ.Τ.Ε.Λ",
+          "variants": 1,
+          "tripCount": 1,
+          "stops": 63,
+          "lengthKm": 39.9,
+          "stats": {
+            "observations": 1852,
+            "matched": 1852,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.22459232444078522,
+            "roundaboutSegs": 62,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "83N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "ΣΤΑΥΡΟΥΠΟΛΗ - ΛΑΓΚΑΔΑΣ (ΟΙΚΙΣΜΟΣ ΠΑΠΑΚΥΡΙΑΖΗ ΜΕΣΩ ΑΝΩ ΛΑΓΥΝΩΝ)",
+          "variants": 1,
+          "tripCount": 14,
+          "stops": 40,
+          "lengthKm": 20.05,
+          "stats": {
+            "observations": 949,
+            "matched": 949,
+            "noCandidates": 0,
+            "viterbiBreaks": 1,
+            "bridged": 0,
+            "rawStretchCount": 1,
+            "rawMeters": 19,
+            "meanError": 0.4514682616622223,
+            "roundaboutSegs": 4,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "ΛΑΓΚΑΔΑΣ - ΣΤΑΥΡΟΥΠΟΛΗ (ΟΙΚΙΣΜΟΣ ΠΑΠΑΚΥΡΙΑΖΗ ΜΕΣΩ ΑΝΩ ΛΑΓΥΝΩΝ)",
+          "variants": 1,
+          "tripCount": 16,
+          "stops": 44,
+          "lengthKm": 21.22,
+          "stats": {
+            "observations": 996,
+            "matched": 996,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.3214161073095483,
+            "roundaboutSegs": 9,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "85N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "ΘΕΣ/ΝΙΚΗ - ΝΙΚΟΠΟΛΗ - ΕΥΑΓΓΕΛΙΣΤΡΙΑ",
+          "variants": 1,
+          "tripCount": 8,
+          "stops": 79,
+          "lengthKm": 64.26,
+          "stats": {
+            "observations": 2612,
+            "matched": 2612,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 1,
+            "rawMeters": 201,
+            "meanError": 0.2924363660745295,
+            "roundaboutSegs": 0,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "ΕΥΑΓΓΕΛΙΣΤΡΙΑ - ΝΙΚΟΠΟΛΗ - ΘΕΣ/ΝΙΚΗ",
+          "variants": 1,
+          "tripCount": 8,
+          "stops": 76,
+          "lengthKm": 64.89,
+          "stats": {
+            "observations": 2604,
+            "matched": 2604,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 1,
+            "rawMeters": 201,
+            "meanError": 0.2596930248591466,
+            "roundaboutSegs": 0,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "86N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "ΛΑΓΥΝΑ - ΑΡΔΑΜΕΡΙ - ΓΕΡΑΚΑΡΟΥ - ΛΑΓΚΑΔΙΚΙΑ",
+          "variants": 1,
+          "tripCount": 3,
+          "stops": 54,
+          "lengthKm": 45.97,
+          "stats": {
+            "observations": 1439,
+            "matched": 1439,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.2626823189647875,
+            "roundaboutSegs": 0,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "87N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "ΙΚΕΑ - ΒΑΣΙΛΙΚΑ - ΡΥΣΙΟ - ΑΓ. ΑΝΤΩΝΗΣ",
+          "variants": 1,
+          "tripCount": 2,
+          "stops": 64,
+          "lengthKm": 30.33,
+          "stats": {
+            "observations": 1335,
+            "matched": 1335,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.2684105034141401,
+            "roundaboutSegs": 11,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "ΒΑΣΙΛΙΚΑ - ΑΓ.ΑΝΤΩΝΗΣ - ΡΥΣΙΟ - ΙΚΕΑ",
+          "variants": 1,
+          "tripCount": 2,
+          "stops": 65,
+          "lengthKm": 31.79,
+          "stats": {
+            "observations": 1387,
+            "matched": 1387,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.29289135489809925,
+            "roundaboutSegs": 4,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "88N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "ΙΚΕΑ - ΜΕΣΗΜΕΡΙ ΑΠΟ ΛΑΚΩΜΑ - ΔΥΤ. ΠΑΡΑΠΛΕΥΡΗ",
+          "variants": 1,
+          "tripCount": 3,
+          "stops": 61,
+          "lengthKm": 34.49,
+          "stats": {
+            "observations": 1597,
+            "matched": 1597,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.1939091506664825,
+            "roundaboutSegs": 20,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "89N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "1",
+          "headsign": "ΑΚΡΟΠΟΤΑΜΟΣ - Δ/ΣΗ ΑΓΙΟΝΕΡΙΟΥ",
+          "variants": 1,
+          "tripCount": 18,
+          "stops": 70,
+          "lengthKm": 43.8,
+          "stats": {
+            "observations": 1788,
+            "matched": 1788,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.20813895337546104,
+            "roundaboutSegs": 62,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "91N",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "ΛΑΓΚΑΔΑΣ - ΟΙΚΙΣΜΟΣ ΠΑΠΑΚΥΡΙΑΖΗ",
+          "variants": 1,
+          "tripCount": 6,
+          "stops": 9,
+          "lengthKm": 3.08,
+          "stats": {
+            "observations": 156,
+            "matched": 156,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.2825251215870959,
+            "roundaboutSegs": 4,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "ΟΙΚΙΣΜΟΣ ΠΑΠΑΚΥΡΙΑΖΗ - ΛΑΓΚΑΔΑΣ",
+          "variants": 1,
+          "tripCount": 6,
+          "stops": 12,
+          "lengthKm": 3.83,
+          "stats": {
+            "observations": 184,
+            "matched": 184,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0.29741660473780485,
+            "roundaboutSegs": 9,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
     },
     {
       "line": "M1",
@@ -9048,7 +9275,8 @@
             "extEnd": 0
           }
         }
-      ]
+      ],
+      "rank": 1
     }
   ]
 }
