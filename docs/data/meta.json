@@ -8655,6 +8655,56 @@
       "rank": 1
     },
     {
+      "line": "M1",
+      "mode": "tram",
+      "color": "#e30613",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "Νέα Ελβετία",
+          "variants": 1,
+          "tripCount": 1,
+          "stops": 13,
+          "lengthKm": 8.07,
+          "stats": {
+            "observations": 13,
+            "matched": 13,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0,
+            "roundaboutSegs": 0,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "Νέος Σιδηροδρομικός Σταθμός (Ν.Σ.Σ.)",
+          "variants": 1,
+          "tripCount": 1,
+          "stops": 13,
+          "lengthKm": 7.98,
+          "stats": {
+            "observations": 13,
+            "matched": 13,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 0,
+            "roundaboutSegs": 0,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 1
+    },
+    {
       "line": "01N",
       "mode": "bus",
       "color": "#000000",
@@ -9227,56 +9277,6 @@
         }
       ],
       "rank": 2
-    },
-    {
-      "line": "M1",
-      "mode": "tram",
-      "color": "#e30613",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "Νέα Ελβετία",
-          "variants": 1,
-          "tripCount": 1,
-          "stops": 13,
-          "lengthKm": 8.07,
-          "stats": {
-            "observations": 13,
-            "matched": 13,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0,
-            "roundaboutSegs": 0,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "Νέος Σιδηροδρομικός Σταθμός (Ν.Σ.Σ.)",
-          "variants": 1,
-          "tripCount": 1,
-          "stops": 13,
-          "lengthKm": 7.98,
-          "stats": {
-            "observations": 13,
-            "matched": 13,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 0,
-            "roundaboutSegs": 0,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ],
-      "rank": 1
     }
   ]
 }
